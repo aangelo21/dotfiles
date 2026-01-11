@@ -1,8 +1,11 @@
 *
-!hypr/
-!waybar/
-!alacritty/
-!nvim/
-
+!/hypr/
+!/hypr/**
+!/waybar/
+!/waybar/**
+!/alacritty/
+!/alacritty/**
+!/nvim/
+!/nvim/**
 !.gitignore
 !README.md
