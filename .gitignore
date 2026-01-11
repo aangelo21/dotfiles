@@ -7,5 +7,7 @@
 !/alacritty/**
 !/nvim/
 !/nvim/**
+!/wofi/
+!/wofi/**
 !.gitignore
 !README.md

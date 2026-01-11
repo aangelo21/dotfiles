@@ -1,0 +1,16 @@
+show=drun
+width=400
+height=450
+location=center
+always_run=true
+show_all=true
+print_command=true
+insensitive=true
+prompt=Buscar aplicaciones...
+columns=1
+sort_order=alphabetical
+layer=overlay
+allow_images=true
+image_size=24
+display_generic=true
+location=0
