@@ -4,6 +4,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
+			"saghen/blink.cmp",
 		},
 		config = function()
 			require("mason").setup()
@@ -22,7 +23,8 @@ return {
 			local servers = { "lua_ls", "pyright", "ts_ls", "astro", "tailwindcss", "html", "cssls" }
 
 			for _, server in ipairs(servers) do
-				vim.lsp.config(server, {})
+				local capabilities = require("blink.cmp").get_lsp_capabilities()
+				vim.lsp.config(server, { capabilities = capabilities })
 				vim.lsp.enable(server)
 			end
 
