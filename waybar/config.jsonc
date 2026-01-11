@@ -5,23 +5,92 @@
     "margin-top": 5,
     "margin-left": 10,
     "margin-right": 10,
+    "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["clock"],
+    "modules-center": ["cpu"],
+    "modules-right": ["pulseaudio", "bluetooth", "battery", "clock", "group/power-menu"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{name}",
-        "persistent-workspaces": {
-            "1": []
-        }
+        "format": "{name}"
+    },
+
+    "cpu": {
+        "format": "    {usage}%",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{icon}   {volume}%",
+        "format-muted": "    Muted",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "on-click": "blueman-manager"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}   {capacity}%",
+        "format-charging": "󱐋   {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "clock": {
         "timezone": "Atlantic/Canary",
-        "format": "󱑂 {:%H:%M}",
-        "format-alt": "󰃭 {:%d·%m·%Y}",
+        "format": "󱑂   {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "group/power-menu": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/lock",
+            "custom/reboot",
+            "custom/exit"
+        ]
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
+    },
+
+    "custom/lock": {
+        "format": "󰌾",
+        "on-click": "hyprlock",
+        "tooltip": false
+    },
+
+    "custom/reboot": {
+        "format": "󰑐",
+        "on-click": "systemctl reboot",
+        "tooltip": false
+    },
+
+    "custom/exit": {
+        "format": "󰈆",
+        "on-click": "hyprctl dispatch exit 0",
+        "tooltip": false
     }
 }

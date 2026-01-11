@@ -1,39 +1,52 @@
 * {
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "CaskaydiaMono NF", sans-serif;
   font-size: 13px;
   border: none;
   border-radius: 0;
 }
 
 window#waybar {
-  background-color: rgba(26, 27, 38, 0.8);
+  background-color: rgba(26, 27, 38, 0.9);
   color: #c0caf5;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  border-radius: 8px;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  background-color: transparent;
+  padding: 0 10px;
   color: #565f89;
-  border-bottom: 3px solid transparent;
 }
 
 #workspaces button.active {
   color: #7aa2f7;
-  border-bottom: 3px solid #7aa2f7;
+  border-bottom: 2px solid #7aa2f7;
 }
 
-#workspaces button.urgent {
-  background-color: #f7768e;
-  color: #ffffff;
-}
-
+#cpu,
+#pulseaudio,
+#bluetooth,
+#battery,
 #clock {
-  color: #73daca;
-  background-color: rgba(41, 46, 66, 0.9);
-  padding: 0 15px;
-  border-radius: 8px;
-  margin: 4px;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+#group-power-menu {
+  padding-left: 10px;
+  padding-right: 15px;
+  background-color: transparent;
+}
+
+#custom-power {
+  color: #f7768e;
+  padding: 0 10px;
+}
+
+#custom-lock,
+#custom-reboot,
+#custom-exit {
+  color: #7aa2f7;
+  padding: 0 12px;
+}
+
+#battery.critical {
+  color: #f7768e;
 }
