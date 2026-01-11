@@ -1,0 +1,8 @@
+*
+!hypr/
+!waybar/
+!alacritty/
+!nvim/
+
+!.gitignore
+!README.md
