@@ -1,0 +1,9 @@
+[general]
+import = [ "~/.config/alacritty/themes/tokyonight_storm.toml" ]
+
+[window]
+padding = { x = 5, y = 5 }
+opacity = 0.8
+
+[font]
+normal = { family = "CaskaydiaMono NF", style = "regular" }
