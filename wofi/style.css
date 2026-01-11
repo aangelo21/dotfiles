@@ -13,10 +13,15 @@ window {
   color: #c0caf5;
 }
 
+#inner-box {
+  margin: 5px;
+}
+
 #entry {
   border-radius: 0px;
 }
 
 #entry:selected {
   background-color: #3b4261;
+  color: #c0caf5;
 }
